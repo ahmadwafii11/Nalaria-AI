@@ -1,68 +1,226 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/*All*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fresca', sans-serif;
 }
 
 body {
-  margin: 0;
+  background: #f5f5f5;
+}
+
+/*class APP*/
+.app {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* --------- Halaman Navbar -------------*/
+
+/*class sidebar*/
+.sidebar{
+  width: 260px;
+  background: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  transition: margin-right 0.2s ease-in-out 0.5s;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/*--- Sidebar ketika collapsed dijalankan ---*/
+
+/*class sidebar ketika collapsed dijalankan*/
+.sidebar.collapsed{
+  width: 80px;
+}
+
+/*class sidebar ketika collapsed dijalankan dan class menu-item*/
+.sidebar.collapsed .menu-item{
+  justify-content: center;
+  padding: 10px;
+}
+
+/*class sidebar untuk mengatur menu icon*/
+.sidebar.collapsed .menu-icon{
+  padding-left: 20px;
+  width: 50px;;
+  height: 50px;
+  
+}
+
+/*Class untuk menghilangkan tulisan saat sidebar aktif*/
+.sidebar.collapsed .menu-item span{
+  display: none;
+}
+
+/*class buat logo container saat sidebar aktif*/
+.sidebar.collapsed .logo-container{
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+}
+
+/*class untuk menghilangkan logo text saat sidebar aktif*/
+.sidebar.collapsed .logo-text{
+  display: none;
+}
+
+/*class untuk menampilkan logo nalariaAI saat sidebar aktif*/
+.sidebar.collapsed .logo-icon{
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/*class untuk menyembunyikan icon sidebar saat sidebar aktif*/
+.sidebar.collapsed .collapse-btn{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border: none;
+  background: none;
+  cursor: ew-resize;
+}
+
+/*class untuk menampilkan icon sidebar saat cursor ke arah logo nalariaAI ketika sidebar aktif*/
+.sidebar.collapsed .logo-container:hover .collapse-btn{
+  opacity: 1;
+}
+
+/*class untuk menyembunyikan logo nalariaAI saat cursor ke arah logo nalariaAI ketika sidebar aktif */
+.sidebar.collapsed .logo-container:hover .logo-icon{
+  opacity: 0;
+}
+
+/*--------------------------------------------*/
+
+/*class logo*/
+
+/*class logo container*/
+.logo-container{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/*class logo image*/
+.logo-img{
+  transition: opacity 0.2s ease;
+}
+
+/*class logo with text*/
+.logo-text{
+  max-width: 130px;
+  max-height: 50px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/*class logo without text*/
+.logo-icon{
+  display: none;
+  position: static;
+  opacity: 1;
+}
+
+/*Clas icon sidebar*/
+.collapse-btn{
+  position: static;
+  opacity: 1;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: ew-resize;
+  transition: opacity 0.2s ease;
+}
+
+/*class collapse-btn untuk image*/
+.collapse-btn img{
+  width: 30px;
+  height: 30px;
+}
+
+/*class menu*/
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*class menu-item*/
+.menu-item{
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+/*class untuk tulisan menu dengan span*/
+.menu-item span{
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/*class menu icon*/
+.menu-icon{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 20px;
 }
+
+/*class menu-item:hover*/
+.menu-item:hover{
+  background: #d9d9d9;
+}
+
+/*class untuk menu yang halaman nya sedang dibuka (aktif)*/
+.menu-item.active{
+  background: #d9d9d9;
+  font-weight: bold;
+}
+
+/*user box*/
+.user-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.role{
+  font-size: 12px;
+  color: #555;
+}
+
+.upgrade-btn{
+  padding: 6px 10px;
+  border: 1px solid #000;
+}
+
