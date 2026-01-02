@@ -69,6 +69,7 @@ export default function Navbar() {
                     </NavLink>
                 </nav>
                 <button className="upgrade-btn">
+                    <img src="../public/icon/icon masuk.svg" alt="icon sidebar"/>
                     {!collapsed && <span>Masuk</span>}
                 </button>
             </aside>

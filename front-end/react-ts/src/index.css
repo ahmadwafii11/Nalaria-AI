@@ -75,8 +75,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  max-width: 50px;
-  max-height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 /*class untuk menyembunyikan icon sidebar saat sidebar aktif*/
@@ -100,6 +100,19 @@ body {
 /*class untuk menyembunyikan logo nalariaAI saat cursor ke arah logo nalariaAI ketika sidebar aktif */
 .sidebar.collapsed .logo-container:hover .logo-icon{
   opacity: 0;
+}
+
+/*Class untuk tombol masuk bawah pada saat sidebar aktif*/
+.sidebar.collapsed .upgrade-btn{
+  border: none;
+}
+
+/*Class untuk memunculkan icon masuk saat sidebar aktif*/
+.sidebar.collapsed .upgrade-btn img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
 
 /*--------------------------------------------*/
@@ -145,7 +158,6 @@ body {
   background: none;
   border: none;
   cursor: ew-resize;
-  transition: opacity 0.2s ease;
 }
 
 /*class collapse-btn untuk image*/
@@ -169,6 +181,7 @@ body {
   border: none;
   padding: 10px 12px;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 /*class untuk tulisan menu dengan span*/
@@ -200,30 +213,34 @@ body {
   font-weight: bold;
 }
 
-/*user box*/
-.user-box{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.user-info{
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-}
-
-.role{
-  font-size: 12px;
-  color: #555;
-}
-
+/*Class upgrade-btn untuk tombol masuk bawah*/
 .upgrade-btn{
-  padding: 6px 10px;
-  border: 1px solid #000;
+  display: flex;
+  padding: 5px 10px;
+  border: solid 1px;
+  cursor: pointer;
+  border-radius: 20px;
+  justify-content: center;
 }
 
+/*Class unutk tulisan tombol masuk bawah*/
+.upgrade-btn span{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*class untuk gambar button masuk bawah*/
+.upgrade-btn img{
+  position: static;
+  opacity: 1;
+  display: none;
+}
+
+.upgrade-btn:hover{
+  background: #d9d9d9;
+  border: none;
+}
 /* --------- Halaman Beranda -------------*/
 
 /*Class content*/
