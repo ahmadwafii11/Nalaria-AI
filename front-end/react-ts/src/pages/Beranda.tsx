@@ -45,7 +45,10 @@ export default function Beranda() {
                         <strong className="list-judul">PDF to Excel</strong>
                         <p>Membantu Anda dalam mengkonversi dokumen format PDF ke dalam bentuk dokumen format Excel.</p>
                     </li>
-                    
+                    <li>
+                        <strong className="list-judul">Remove Background</strong>
+                        <p>Membantu Anda dalam menghapus background atau latar belakang pada file berformat JPG, PNG.</p>
+                    </li>
                 </ul>
                 <p>Selain itu, NalariaAI sedang dalam proses pengembangan fitur ImageAI & TextAI. Anda dapat berkontribusi pada pengembangan fitur tersebut disini.</p>
                 <p>Sekian dari kami,</p>
