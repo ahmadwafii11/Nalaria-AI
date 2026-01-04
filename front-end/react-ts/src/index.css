@@ -241,6 +241,8 @@ body {
   background: #d9d9d9;
   border: none;
 }
+
+
 /* --------- Halaman Beranda -------------*/
 
 /*Class content*/
@@ -282,4 +284,107 @@ body {
 /*class feature-list li*/
 .feature-list li{
   margin-bottom: 12px;
+}
+
+/* --------- Halaman Alat -------------*/
+
+/*Class content*/
+.content{
+  flex: 1;
+  background: #ffffff;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/*class content h1*/
+.content h1{
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*class content subtitle*/
+.content .subtitle{
+  font-size: 1.5rem;
+  margin-top: -15px;
+  text-align: center;
+  font-style: italic;
+}
+
+/*Class card container*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: black;
+}
+
+/*Class card*/
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  justify-content: space-between;
+  text-decoration: none !important;
+}
+
+/*Class card-header*/
+.card-header{
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/*Class card-body untuk h3*/
+.card-body h3{
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #444;
+  text-decoration: none;
+}
+
+/*Class card-body untuk p*/
+.card-body p{
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+  text-decoration: none;
+}
+
+/*Class card:hover*/
+.card:hover{
+  border: 1px solid black;
+}
+
+/*Class button filter menu alat*/
+
+/*buat bagi kotak filternya*/
+.tool-filter{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/*buat antar tombol buttonnya*/
+.tool-filter button{
+  padding: 6px 16px;
+  border: none;
+  background: #d9d9d9;
+  cursor: pointer;
+}
+
+/*Buat button yang aktif tombol filternya*/
+.tool-filter .active{
+  background-color: #cfcfcf;
+  font-weight: bold;
 }
