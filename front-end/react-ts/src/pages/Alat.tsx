@@ -1,13 +1,14 @@
 import "../index.css"
 import { NavLink } from "react-router-dom";
 import { alatList } from "../data/alatList";
+import { ICON_MAP } from "../assets/icons";
 
 export default function Alat() {
     return(
         <>
             <div className="content">
                 <h1>Smart Office Tools by NalariaAI</h1>
-                <p className="subtitle">Semua Alat perlengkapan untuk memudahkan pekerjaan kantor Anda</p>
+                <p className="subtitle">Semua alat perlengkapan untuk memudahkan pekerjaan kantor Anda</p>
 
                 {/*Filter Menu Alat*/}
                 <div className="tool-filter">
@@ -23,9 +24,13 @@ export default function Alat() {
                     {alatList.map((alat) => (
                         <NavLink
                             key={alat.id}
-                            to={`/alat/${alat.id}`}
+                            to={`/alat/${alat.name}`}
                             className="card"
                         >
+                            <img 
+                            src={ICON_MAP[alat.icon]} 
+                            alt={alat.name}
+                            className="card-header" />
                             <div className="card-body">
                                 <h3>{alat.name}</h3>
                                 <p>{alat.desc}</p>
