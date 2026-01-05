@@ -339,8 +339,11 @@ body {
 
 /*Class card-header*/
 .card-header{
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  align-items: center;
 }
 
 /*Class card-body untuk h3*/
@@ -364,7 +367,6 @@ body {
 .card:hover{
   border: 1px solid black;
 }
-
 /*Class button filter menu alat*/
 
 /*buat bagi kotak filternya*/
