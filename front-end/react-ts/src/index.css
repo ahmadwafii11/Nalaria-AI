@@ -379,10 +379,11 @@ body {
 
 /*buat antar tombol buttonnya*/
 .tool-filter button{
-  padding: 6px 16px;
+  padding: 6px 20px;
   border: none;
   background: #d9d9d9;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 /*Buat button yang aktif tombol filternya*/
