@@ -9,6 +9,11 @@ import pdfToJPG from "./icon pdf to jpg.svg"
 import pdfToExcel from "./icon pdf to excel.svg"
 import removeBackground from "./icon remove background.svg"
 
+import word from "./icon word.svg"
+import pdf from "./icon pdf.svg"
+import jpg from "./icon jpg.svg"
+import excel from "./icon excel.svg"
+
 export const ICON_MAP = {
     wordToPDF           : wordToPDF,
     mergePDF            : mergePDF,
@@ -21,3 +26,10 @@ export const ICON_MAP = {
     pdfToExcel          : pdfToExcel,
     removeBackground    : removeBackground
 }
+
+export const ICON_FILE = {
+    word,
+    pdf,
+    jpg,
+    excel
+} as const 

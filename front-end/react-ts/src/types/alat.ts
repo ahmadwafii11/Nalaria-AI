@@ -10,10 +10,14 @@ export type IconType=
  | "pdfToExcel"
  | "removeBackground"
 
+export type IconKey = keyof typeof import("../assets/icons").ICON_FILE
+
 export type AlatItem = {
     id: string;
     name: string;
     desc: string;
     category?: "PDF" | "Word" | "Excel" | "JPG";
     icon: IconType;
+    iconFileInput:  IconKey;
+    accept?: string;
 };
