@@ -388,6 +388,66 @@ body {
 
 /*Buat button yang aktif tombol filternya*/
 .tool-filter .active{
-  background-color: #cfcfcf;
+  background-color: #ffeb00;
   font-weight: bold;
+  color: white;
+}
+
+/* --------- Halaman Detail Alat -------------*/
+
+/*Class tool-detail*/
+.tool-detail{
+  text-align: center;
+}
+
+/*class tool-detail untuk h1*/
+.tool-detail h1{
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*class upload wrapper*/
+.upload-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+/*class upload-box untuk membngkus kotak input*/
+.upload-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  background: #ffeb00;
+  padding: 10px 150px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/*class upload-box:hover*/
+.upload-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*class upload-icon untuk img*/
+.upload-icon img{
+  width: 2px;
+  height: 2px;
+}
+
+/*class upload-text untuk teks "Pilih File"*/
+.upload-text{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/*class upload-subtext untuk subteks*/
+.upload-subtext{
+  font-size: 20px;
 }
