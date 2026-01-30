@@ -1,4 +1,5 @@
 import "../index.css"
+import { Link } from "react-router-dom"
 
 export default function Beranda() {
     return(
@@ -50,7 +51,9 @@ export default function Beranda() {
                         <p>Membantu Anda dalam menghapus background atau latar belakang pada file berformat JPG, PNG.</p>
                     </li>
                 </ul>
-                <p>Selain itu, NalariaAI sedang dalam proses pengembangan fitur ImageAI & TextAI. Anda dapat berkontribusi pada pengembangan fitur tersebut disini.</p>
+                <p>Selain itu, NalariaAI sedang dalam proses pengembangan fitur ImageAI & TextAI. Anda dapat berkontribusi pada pengembangan fitur tersebut 
+                    <Link to="/kontributor" className="link-navigate"> disini.</Link>
+                </p>
                 <p>Sekian dari kami,</p>
                 <p>Salam hangat</p>
             </main>
