@@ -16,6 +16,17 @@ body {
   height: 100vh;
 }
 
+.link-navigate{
+  color: black;
+  text-decoration: none;
+}
+
+.link-navigate:hover{
+  color: #ffeb00;
+  text-decoration: none;
+  font-weight: 400;
+}
+
 /* --------- Halaman Navbar -------------*/
 
 /*class sidebar*/
@@ -436,8 +447,8 @@ body {
 
 /*class upload-icon untuk img*/
 .upload-icon img{
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
 }
 
 /*class upload-text untuk teks "Pilih File"*/
@@ -449,5 +460,121 @@ body {
 
 /*class upload-subtext untuk subteks*/
 .upload-subtext{
-  font-size: 20px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+/*Class untuk file-preview*/
+.file-preview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/*Class untuk file-card*/
+.file-card{
+  width: 180px;
+  height: 220px;
+  border: 1px solid #ddd;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  position: relative;
+} 
+
+/*clas untuk icon file*/
+.file-icon{
+  width: 40px;
+}
+
+/*class untuk nama file*/
+.file-name{
+  font-size: 14px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/*class untuk button remove*/
+.remove-btn{
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/*class untuk button convert*/
+.convert-btn{
+  background: #ffeb00;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+/*class button convert hover*/
+.convert-btn:hover{
+  background: #f5dc00;
+}
+
+/* --------- Halaman Kontributor-Survei -------------*/
+.survey-form{
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  padding: 10px;
+}
+
+.form-group{
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.radio-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.radio-group label {
+  font-weight: normal;
+  margin-left: 20px;
+}
+.radio-group label input{
+  margin-right: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="number"]{
+  width: 13%;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
